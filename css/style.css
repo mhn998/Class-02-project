@@ -1,0 +1,46 @@
+    main{
+        padding-left: 2%;
+    }
+
+    h2{
+        display:inline-block;
+
+    }
+
+    .nav ul{
+        margin-bottom:0px;
+    }
+
+.Overview {
+    margin-top:0px;
+}
+
+.Overview p {
+    max-width: 80%;
+    font-size:1.2em;
+}
+
+    footer{
+        text-align:center;
+ }
+    .nav ul{
+    display:flex;
+    justify-content: flex-start;
+    background-color:black;
+    }
+
+    .nav ul li {
+        margin:20px;
+    }
+    ul li a {
+        color:white;
+    }
+    footer ul li a{
+        color:black;
+    }
+    .Education , .Work-Experience , .Overview , .Interests {
+        border-bottom: 1px dashed white;
+    }
+    .Interests , .Education , .Work-Experience , .Overview , .Goals  {
+        padding-bottom:2%;
+    }
