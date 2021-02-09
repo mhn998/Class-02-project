@@ -1,6 +1,7 @@
 // strict Mode activated 
 'Use strict'
 var userName = prompt("What's your name?");
+var score=0;
 
 alert ("Greetings Mr./Ms. " + userName);
 
@@ -25,7 +26,7 @@ var score = 0;
         console.log("Am I an engineer? ", "Incorrect")
     }
 
-    var weight = prompt("Do you think my wight is more than 90kg?").toLowerCase();
+    var weight = prompt("Do you think my weight is more than 90kg?").toLowerCase();
 
     while (weight !== 'yes' && weight !== 'no' && weight !== 'y' && weight !== 'n') {
         weight = prompt("Do you think my wight is more than 90kg?").toLowerCase();
@@ -81,14 +82,14 @@ var score = 0;
 
     switch (hobbie) {
         case "yes" || "y":
+            score++;
             alert("Yes! That's Correct");
             console.log("Do you think I love programming?", "Correct");
-            score++;
             break;
 
         case "no" || "n" : 
             alert("Sorry! That's incorrect");
-            console.log("Do you think I love programming?" , "Incorrect");
+            console.log("Do you think I love programming?", "Incorrect");
             break;
 
     }
@@ -97,37 +98,70 @@ var score = 0;
 
 alert("Thank you " + userName + " , kindly check your console to see your answers after you finish another two guess questions");
 
+let userAns = false;
+let numberguess;
 
 for (i=1; i<5;i++) {
-    let numberguess = prompt("Guess a number between 1 to 30, you have only 4 attempts ");
+    numberguess = prompt("Guess a number between 1 to 30 ");
     if (numberguess == '7') {
+        userAns = true;
         alert("True!, you nailed it!")
-        console.log("Guess a number between 1 to 30" , "Passed")
+        console.log("Guess a number between 1 to 30 : " , "Passed")
         score++;
         break;
     } else if ((numberguess >= 1 && numberguess <= 6) || (numberguess >= 8 && numberguess <=14 ) ) {
         alert ("you were somewhere near!" + "Please try again, you have " + (4-i) + " Attempts left ")
-    } else if (numberguess >= 15 && numberguess <=30)
-        alert("So far!" + "please try again, you have " + (4-i) + " times left " )
+    } else if (numberguess >= 15 && numberguess <=30) {
+        alert("So far!" + "please try again, you have " + (4-i) + "attempts left " )
+    } else {
+        alert("you should select a number between 1-30 ");
+        i--;
+    }
+        
 
+} 
+
+if (!userAns) {
+    confirm("Hard luck! , .. The answer was 7 !");
+    console.log("guess a number between 1 to 30: " , "Failed")
 }
 
-confirm("incase you didn't guess it , .. The answer was 7 ! :D & if you did Congrats! ");
 
-var favFood = ["pasta","pizza","burger","steak","chicken"];
+let Answer;
+let userAnswer = false;
+let guessFood;
 
+let favFood = ["pasta","pizza","burger","steak","chicken"];
 
-for(i=1; i<7; i++) {
-    let guessFood = prompt("What do you think my favorite food? (There are 5 correct answers) & you have only 6 attempts ")
-    if( favFood.includes(guessFood)) {
-        alert('you were correct , The possible answers are ' + favFood)
-        console.log("What do you think my favorite food?", "Passed")
-        score++;
+for(let j=1; j<=6; j++) {
+    guessFood = prompt("What do you think my favorite food? (There are 5 correct answers) & you have only" + (7-j) + "attempts");
+    for (let i =0; i<favFood.length;i++) {
+        if( guessFood.toLowerCase() === favFood[i]) {
+            userAnswer = true;
+            score++;
+            alert('you were correct , The possible answers are ' + favFood)
+            console.log("What do you think my favorite food?: ", "Passed" )
+            break;
+    } else {
+        continue;
+    }
+   
+    }
+    if (userAnswer) {
         break;
     } else {
-        alert("unfortuantely! That's wrong , you have" + (6-i) +" Attempts left " );
+
     }
 } 
 
-confirm("incase you didn't guess it , These were the possible Answers " + favFood);
+
+if (!userAnswer) {
+    confirm(" Hard luck! These were the possible Answers " + favFood); 
+    console.log("What do you think my favorite food?: ", "Failed")
+} else {
+
+}
+
 alert("your score out of 7 is: " + score )
+alert("kindly check your console Now to see the report for questions & your Answers")
+console.log (" your score is: " + score + " out of 7 ")
