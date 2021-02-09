@@ -38,9 +38,9 @@
     footer ul li a{
         color:black;
     }
-    .Education , .Work-Experience , .Overview , .Interests {
+    .Education , .Work-Experience , .Overview , .Interests , .Goals {
         border-bottom: 1px dashed white;
     }
-    .Interests , .Education , .Work-Experience , .Overview , .Goals  {
+    .Interests , .Education , .Work-Experience , .Overview , .Goals , .Top-10-countries  {
         padding-bottom:2%;
     }
