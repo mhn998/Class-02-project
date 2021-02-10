@@ -2,8 +2,8 @@
 'Use strict'
 var score=0;
 
-//  Greeting & instruction 
-function greetingAndinstructions() {
+//  Greetings & instruction 
+function greetingsAndinstructions() {
     let userName = prompt("What's your name?");
     alert ("Greetings Mr./Ms. " + userName);
 
@@ -15,7 +15,7 @@ function greetingAndinstructions() {
 } 
 
     // ----- 1st question ---- // 
-    function checkRole() {
+    function cheCkRole() {
         let role = prompt("Am I an engineer?").toLowerCase();
 
         while (role !== 'yes' && role !== 'no' && role !== 'y' && role !== 'n') {
@@ -36,7 +36,7 @@ function greetingAndinstructions() {
 
 
     // ----- 2nd question ------ // 
-    function checkWeight() {
+    function cheCkWeight() {
         let weight = prompt("Do you think my weight is more than 90kg?").toLowerCase();
 
     while (weight !== 'yes' && weight !== 'no' && weight !== 'y' && weight !== 'n') {
@@ -56,7 +56,7 @@ function greetingAndinstructions() {
 
     
     // ------ 3rd question ---- // 
-    function checkAge() {
+    function cheCkAge() {
         let age = prompt("Do you think I am above 24 years old?").toLowerCase();
 
     while (age !== 'yes' && age !== 'no' && age !== 'y' && age !== 'n') {
@@ -79,7 +79,7 @@ function greetingAndinstructions() {
 
     // ---- 4th question ---- //  
     
-    function checkCountry() {
+    function cheCkCountry() {
         let country = prompt("Do I live in Jordan?").toLowerCase();
 
         while (country !== 'yes' && country !== 'no' && country !== 'y' && country !== 'n') {
@@ -101,7 +101,7 @@ function greetingAndinstructions() {
     
 
     // --- 5th question ----- // 
-    function checkHobbie() {
+    function cheCkHobbie() {
         let hobbie = prompt("Do you think I love programming?").toLowerCase();
 
         while (hobbie !== 'yes' && hobbie !== 'no' && hobbie !== 'y' && hobbie !== 'n') {
@@ -127,11 +127,11 @@ function greetingAndinstructions() {
 
 
 // calling first 5 questions 
-var callfun1 = greetingAndinstructions(); // declared inside other variable to use it in the below alert
-checkRole();
-checkWeight();
-checkCountry();
-checkHobbie();
+var callfun1 = greetingsAndinstructions(); // declared inside other variable to use it in the below alert
+cheCkRole();
+cheCkWeight();
+cheCkCountry();
+cheCkHobbie();
 
 
 // Thank you message after complete answering above 5 questions // 
@@ -144,7 +144,7 @@ alert("Thank you " + callfun1 + " , kindly check your console to see your answer
 let userAns = false;
 let numberguess;
 
-function guessNumbers() {
+function gueSsNumbers() {
     
     for (i=1; i<5;i++) {
     numberguess = prompt("Guess a number between 1 to 30 ");
@@ -173,7 +173,7 @@ function guessNumbers() {
 
 }
 
-guessNumbers();
+gueSsNumbers();
 
 
 // ------ starting 7th question ------ //  
@@ -183,7 +183,7 @@ let guessFood;
 
 let favFood = ["pasta","pizza","burger","steak","chicken"];
 
- function guessfavFood() {
+ function gueSsfavFood() {
      
     for(let j=1; j<=6; j++) {
     guessFood = prompt("What do you think my favorite food? (There are 5 correct answers) & you have only" + (7-j) + "attempts");
@@ -215,18 +215,18 @@ let favFood = ["pasta","pizza","burger","steak","chicken"];
     
 }
 
-guessfavFood();
+gueSsfavFood();
 
 
 
 // finalizing and score 
 
-function ScoreandFinal() {
+function ScoReandFinal() {
     alert("your score out of 7 is: " + score )
     alert("kindly check your console Now to see the report for questions & your Answers")
     console.log (" your score is: " + score + " out of 7 ")
 }
 
-ScoreandFinal();
+ScoReandFinal();
 
 // End // 
