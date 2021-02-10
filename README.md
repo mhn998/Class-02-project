@@ -6,7 +6,7 @@ A web page that tells briefly about the author of the web page (Muhannad) & make
 
 Adds another 2 guess games, the first is about guessing number and the second is about guessing the favorite food. 
 
-We wrap the code with functions by Ala'a. I was the navigator & Ala'a was the driver.  
+I wraped the code with functions. I was the driver (Ala'a) and Muhannad was the navigator. 
 
 ## Code Examples 
 
